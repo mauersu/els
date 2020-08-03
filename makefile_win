@@ -12,4 +12,4 @@ main.o: main.cpp
 	$(CXX) $(CFLAGS) $^ $(SDL_INCLUDE)
 
 clean:
-	rm *.o GameExec
+	-del *.o *.exe
