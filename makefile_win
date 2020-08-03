@@ -1,0 +1,15 @@
+CXX=g++
+
+SDL_INCLUDE=-I"E:\greensoft\mingw64\include" -lmingw32 -lSDL2main -lSDL2
+
+CFLAGS=-c 
+LFLAGS=-o 
+
+Els_win: main.o 
+	$(CXX) $(LFLAGS) $@ $^ $(SDL_INCLUDE)
+
+main.o: main.cpp
+	$(CXX) $(CFLAGS) $^ $(SDL_INCLUDE)
+
+clean:
+	rm *.o GameExec
